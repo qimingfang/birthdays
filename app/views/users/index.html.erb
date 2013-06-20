@@ -1,0 +1,25 @@
+<h1>Listing users</h1>
+
+<table class='table table-striped'>
+  <tr>
+    <th>uid</th>
+    <th>Name</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.uid %></td>
+    <td><%= user.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p><%= link_to "Connect to Facebook", new_user_path, :id => "sign_in", 
+    :class => "uibutton confirm" %>
+</p>
+
+<p>
+<%= link_to 'New User', new_user_path %>
+</p>
